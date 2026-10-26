@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional CV and portfolio of Abdul Awal - Administrative Support & Operations Specialist in Dubai, UAE with 14+ years of multi-client corporate experience.">
+  <title>Abdul Awal — Administrative & Operations Specialist | Executive CV</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #0f172a;
+      --blue: #2563eb;
+      --cyan: #0284c7;
+      --paper: #f8fafc;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+      --line: #cbd5e1;
+      --side: linear-gradient(145deg, #0f172a 0%, #1e3a8a 50%, #0369a1 100%);
+      --side-text: #e2e8f0;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --badge-bg: #eff6ff;
+      --badge-text: #1e40af;
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --navy: #e2e8f0;
+      --blue: #38bdf8;
+      --cyan: #38bdf8;
+      --paper: #030712;
+      --card: #0d1526;
+      --ink: #f8fafc;
+      --text: #cbd5e1;
+      --muted: #94a3b8;
+      --line: #1e293b;
+      --side: #050b14;
+      --side-text: #e2e8f0;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      --badge-bg: #1e293b;
+      --badge-text: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--text);
+      font: 13px/1.6 Inter, system-ui, Arial, sans-serif;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 295px minmax(0, 1fr);
+      gap: 26px;
+      align-items: start;
+      max-width: 1220px;
+      margin: 38px auto;
+      padding: 0 22px;
+    }
+    .sidebar {
+      position: sticky;
+      top: 24px;
+      padding: 26px 20px 16px;
+      border-radius: 16px;
+      color: var(--side-text);
+      background: var(--side);
+      box-shadow: 0 22px 55px rgba(5, 11, 20, 0.3);
+      transition: background 0.3s ease;
+    }
+    .portrait {
+      width: 110px;
+      height: 132px;
+      margin: 0 auto 16px;
+      overflow: hidden;
+      border: 2px solid var(--blue);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .identity { text-align: center; }
+    .eyebrow, .kicker, .foot, .connect-label {
+      font-size: 9px;
+      font-weight: 750;
+      letter-spacing: 0.14em;
+      color: var(--cyan);
+      text-transform: uppercase;
+    }
+    .identity h1 { margin: 5px 0 1px; color: #fff; font: 700 24px/1.2 Georgia, serif; }
+    .identity p { margin: 0; color: #cbd5e1; font-size: 11px; }
+    .contact {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 16px;
+      padding: 14px 0;
+      border-block: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .contact a, .contact div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 11px;
+      overflow-wrap: anywhere;
+    }
+    .contact .symbol { width: 16px; color: var(--cyan); text-align: center; font-weight: bold; }
+    
+    .nav { display: grid; gap: 6px; }
+    .nav-single { display: flex; justify-content: center; width: 100%; }
+    .nav-grid-4 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; width: 100%; }
+    
+    .nav a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 8px 6px;
+      border-radius: 7px;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 10.5px;
+      text-align: center;
+      transition: 0.2s;
+    }
+    .nav a:hover {
+      color: #fff;
+      background: linear-gradient(110deg, #2563eb, #1d4ed8);
+      transform: translateY(-2px);
+    }
+    .foot { text-align: center; margin-top: 18px; color: #cbd5e1; font-size: 8px; }
+    .main { display: grid; gap: 14px; min-width: 0; }
+    .controls {
+      position: fixed;
+      top: 16px;
+      right: 20px;
+      z-index: 5;
+      display: flex;
+      gap: 8px;
+    }
+    .control {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--ink);
+      font: 600 12px Arial, sans-serif;
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .control:hover { border-color: var(--blue); background: var(--blue); color: #fff; }
+    .card {
+      padding: 21px 25px 23px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 20px;
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+    .kicker { margin-bottom: 5px; color: var(--blue); font-size: 8px; }
+    .kicker span { margin-left: 6px; color: var(--muted); letter-spacing: 0.16em; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 13px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      font: 700 17px/1.3 Georgia, serif;
+    }
+    .section-title .symbol { color: var(--blue); }
+    
+    /* Executive Metric Bar */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    .metric-card {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: color-mix(in srgb, var(--paper) 70%, var(--card));
+      text-align: center;
+    }
+    .metric-card b { display: block; font-size: 16px; color: var(--blue); font-family: Georgia, serif; }
+    .metric-card span { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+
+    .letter, .objective, .declaration {
+      padding: 13px 16px;
+      border-left: 3px solid var(--blue);
+      border-radius: 3px 8px 8px 3px;
+      background: color-mix(in srgb, var(--paper) 60%, var(--card));
+      font: 12px/1.62 Georgia, serif;
+      color: var(--text);
+    }
+    .letter p { margin: 0 0 8px; }
+    .letter p:last-child { margin-bottom: 0; }
+    .letter strong { color: var(--ink); }
+    .objective { display: flex; align-items: center; gap: 12px; }
+    .objective p { margin: 0; font-size: 13.5px; color: var(--ink); }
+    .quote { font: 54px/0.8 Georgia, serif; color: var(--blue); }
+    
+    .role-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+      margin: 4px 0 8px;
+    }
+    .company { display: flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 750; font-size: 14px; }
+    .company img { width: 20px; height: 20px; object-fit: contain; border-radius: 3px; }
+    .company small { color: var(--muted); font-size: 10px; font-weight: 500; }
+    .role { color: var(--blue); font-weight: 700; }
+    .date {
+      flex: none;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--ink);
+      background: color-mix(in srgb, var(--paper) 50%, var(--card));
+    }
+    .achievements {
+      display: grid;
+      gap: 3px;
+      margin: 9px 0 13px;
+      color: #059669;
+      font-size: 11px;
+      font-weight: 650;
+    }
+    .subhead {
+      margin: 12px 0 6px;
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .assignments { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .assignments span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 650;
+      background: color-mix(in srgb, var(--paper) 40%, var(--card));
+    }
+    .assignments img { width: 16px; height: 16px; object-fit: contain; border-radius: 2px; flex-shrink: 0; }
+    .assignments small { display: block; color: var(--muted); font-weight: 500; }
+    .list { margin: 5px 0 0; padding-left: 18px; }
+    .list li { margin-bottom: 6px; font-size: 11px; color: var(--text); }
+    .list li::marker { color: var(--blue); }
+    .two-col { columns: 2; column-gap: 26px; }
+    .two-col li { break-inside: avoid; }
+    
+    .training {
+      padding: 10px 12px;
+      border-radius: 7px;
+      background: color-mix(in srgb, var(--paper) 60%, var(--card));
+      font-size: 11px;
+    }
+    .training b { color: var(--ink); }
+    .training p { margin: 4px 0 0; color: var(--text); }
+    .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 15px; }
+    .detail-grid h3 { margin: 0 0 8px; color: var(--ink); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .rows { display: grid; }
+    .rows div {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 5px 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: 10px;
+    }
+    .rows span { color: var(--muted); }
+    .rows b { text-align: right; color: var(--ink); }
+    .pills, .languages { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pills span, .languages span {
+      padding: 5px 8px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      font-size: 10px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-weight: 600;
+    }
+    .education {
+      display: flex;
+      justify-content: space-between;
+      max-width: 310px;
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--line);
+      font-size: 11px;
+    }
+    .education b { color: var(--ink); }
+    .education span { color: var(--muted); }
+    .personal { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+    .personal div { display: grid; gap: 2px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+    .personal span { color: var(--muted); font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .personal b { color: var(--ink); font-size: 11px; }
+    .personal small { color: var(--muted); font-size: 9px; font-weight: 500; }
+    
+    .documents { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .documents a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 10px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 650;
+      background: color-mix(in srgb, var(--paper) 30%, var(--card));
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .documents a:hover { border-color: var(--blue); background: color-mix(in srgb, var(--paper) 70%, var(--card)); }
+    .doc-content { display: flex; flex-direction: column; gap: 2px; }
+    .documents small { color: var(--muted); font-size: 8.5px; font-weight: 500; }
+    .doc-icon { width: 22px; height: 22px; object-fit: contain; border-radius: 3px; flex-shrink: 0; }
+    
+    .declaration { font-size: 12px; }
+    .declaration p { margin: 0 0 9px; }
+    .decl-meta { display: flex; flex-wrap: wrap; gap: 14px; color: var(--muted); font: 10px Arial, sans-serif; }
+    
+    .connect {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 21px 24px;
+      border-radius: 12px;
+      color: #fff;
+      background: linear-gradient(115deg, #0f172a, #1e3a8a 72%, #2563eb);
+    }
+    .connect h2 { margin: 3px 0; color: #fff; font: 700 22px Georgia, serif; }
+    .connect p { margin: 0; color: #cbd5e1; font-size: 10px; }
+    .connect-links { display: flex; gap: 7px; flex-wrap: wrap; }
+    .connect-links a {
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 6px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 650;
+      transition: background 0.2s, color 0.2s;
+    }
+    .connect-links a:hover { background: #fff; color: #0f172a; }
+    
+    .page-foot { display: flex; justify-content: space-between; padding: 2px 5px; color: var(--muted); font-size: 8px; letter-spacing: 0.1em; }
+    .page-foot b { color: var(--ink); }
+    .print-header { display: none; }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; max-width: 750px; margin-top: 68px; }
+      .sidebar { position: relative; top: auto; }
+      .controls { top: 12px; right: 14px; }
+    }
+    @media (max-width: 560px) {
+      .layout { padding: 0 10px; gap: 13px; }
+      .sidebar { padding: 22px 15px 14px; }
+      .card { padding: 17px 15px; }
+      .metrics-bar { grid-template-columns: 1fr; gap: 8px; }
+      .assignments, .detail-grid, .personal, .documents { grid-template-columns: 1fr; }
+      .two-col { columns: 1; }
+      .role-head { flex-direction: column; gap: 4px; }
+      .connect { align-items: flex-start; flex-direction: column; padding: 19px; }
+      .connect-links { width: 100%; }
+      .connect-links a { flex: 1; text-align: center; }
+      .page-foot { font-size: 7px; gap: 7px; }
+    }
+
+    /* ==========================================================
+       PROFESSIONAL EXECUTIVE PRINT & PDF STYLES
+       ========================================================== */
+    @media print {
+      @page { size: A4; margin: 10mm 12mm; }
+      
+      body {
+        background: #ffffff !important;
+        color: #1e293b !important;
+        font: 10.5pt/1.35 Arial, sans-serif !important;
+      }
+
+      .layout {
+        display: block !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .no-print, .sidebar, .controls, .connect, #connect, .documents, #documents, #cover-letter {
+        display: none !important;
+      }
+
+      .main {
+        display: block !important;
+        gap: 0 !important;
+      }
+
+      .print-header {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #0284c7 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .print-header h1 {
+        margin: 2px 0;
+        color: #0f172a !important;
+        font: 700 18pt Georgia, serif !important;
+      }
+
+      .print-header p {
+        margin: 0;
+        color: #0284c7 !important;
+        font: 700 8.5pt Arial, sans-serif !important;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .print-header span { color: #64748b !important; font-size: 9pt !important; }
+      .print-header img {
+        width: 44px;
+        height: 52px;
+        object-fit: cover;
+        object-position: top;
+        border: 1px solid #cbd5e1;
+        border-radius: 4px;
+      }
+
+      .card {
+        margin-bottom: 6px !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+
+      .kicker { display: none !important; }
+
+      .section-title {
+        margin: 8px 0 4px !important;
+        padding-bottom: 2px !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+        color: #0f172a !important;
+        font: 700 11pt Georgia, serif !important;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .section-title .symbol { display: none; }
+
+      .metrics-bar {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 6px !important;
+        margin-bottom: 6px !important;
+      }
+      .metric-card {
+        padding: 6px 8px !important;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .metric-card b { font-size: 12pt !important; color: #2563eb !important; }
+      .metric-card span { font-size: 7.5pt !important; }
+
+      .objective {
+        padding: 4px 0 !important;
+        border-left: none !important;
+        background: transparent !important;
+        font-size: 10.5pt !important;
+        color: #334155 !important;
+      }
+      .objective .quote { display: none !important; }
+
+      .role-head { margin: 3px 0 2px !important; }
+      .company { font-size: 10.5pt !important; color: #0f172a !important; }
+      .company small { color: #64748b !important; font-size: 8.5pt !important; }
+      .role { color: #2563eb !important; font-weight: 700; font-size: 10pt; }
+      .date { border: none !important; background: transparent !important; font-size: 9.5pt !important; color: #64748b !important; }
+
+      .achievements { margin: 2px 0 4px !important; font-size: 9.5pt !important; color: #059669 !important; }
+      .subhead { margin: 4px 0 2px !important; font-size: 9.5pt !important; color: #0f172a !important; }
+
+      .assignments {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+        margin-bottom: 4px;
+      }
+      .assignments span {
+        padding: 3px 5px !important;
+        border: 1px solid #e2e8f0 !important;
+        background: #f8fafc !important;
+        font-size: 9pt !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .assignments img { width: 11px; height: 11px; }
+
+      .list { margin: 2px 0 0 !important; padding-left: 15px !important; }
+      .list li { margin-bottom: 3px !important; font-size: 10pt !important; color: #334155 !important; }
+
+      .training {
+        padding: 5px 7px !important;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        font-size: 9.5pt !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .training p { margin: 1px 0 0 !important; }
+
+      .detail-grid { gap: 12px !important; margin-top: 4px !important; }
+      .detail-grid h3 { font-size: 9.5pt !important; margin-bottom: 3px !important; }
+
+      .rows div { padding: 2px 0 !important; font-size: 9.5pt !important; }
+      .rows span { color: #64748b !important; }
+      .rows b { color: #0f172a !important; }
+
+      .pills span, .languages span {
+        padding: 2px 5px !important;
+        font-size: 9pt !important;
+        border: 1px solid #cbd5e1 !important;
+        background: #f8fafc !important;
+        color: #1e3a8a !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .education { max-width: none !important; padding: 2px 0 !important; font-size: 9.5pt !important; }
+
+      .personal {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 4px 10px !important;
+      }
+      .personal div { padding: 3px 0 !important; border-bottom: none !important; }
+      .personal span { font-size: 8pt !important; }
+      .personal b { font-size: 9.5pt !important; }
+
+      .declaration {
+        padding: 6px 8px !important;
+        border-left: 3px solid #2563eb !important;
+        background: #f8fafc !important;
+        font-size: 10pt !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+      .declaration p { margin-bottom: 3px !important; }
+      .decl-meta { font-size: 9pt !important; }
+
+      .page-foot { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="controls no-print">
+    <button class="control" onclick="window.print()">▤ Print / PDF</button>
+    <button class="control" id="themeToggle" onclick="toggleTheme()">☾ Dark Mode</button>
+  </div>
+  <div class="layout">
+    <aside class="sidebar no-print">
+      <div class="portrait"><img src="https://lh3.googleusercontent.com/d/113uTKvRGwZafVXQmpJnZQmYikAZ1OkQZ" alt="Abdul Awal Profile Picture"></div>
+      <div class="identity">
+        <span class="eyebrow">PROFESSIONAL PROFILE</span>
+        <h1>Abdul Awal</h1>
+        <p>Administration | Security Operations | Operations Coordinator</p>
+      </div>
+      <div class="contact">
+        <div><span class="symbol">⌖</span>Al Quoz 4, Dubai, UAE</div>
+        <a href="tel:+971528182654"><span class="symbol">☎</span>+971 52 818 2654</a>
+        <a href="mailto:aawal86@gmail.com"><span class="symbol">✉</span>aawal86@gmail.com</a>
+        <a href="https://www.linkedin.com/in/aawal86" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><span class="symbol">in</span>LinkedIn Profile</a>
+      </div>
+      
+      <nav class="nav" aria-label="CV sections">
+        <div class="nav-single">
+          <a href="#cover-letter">✉ Cover Letter</a>
+        </div>
+        <div class="nav-grid-4">
+          <a href="#objective">◎ Summary</a>
+          <a href="#experience">▣ Experience</a>
+          <a href="#skills">✦ Skills</a>
+          <a href="#education">▤ Education</a>
+          <a href="#personal">♙ Personal</a>
+          <a href="#documents">▱ Documents</a>
+          <a href="#declaration">✍ Declaration</a>
+          <a href="#connect">➤ Connect</a>
+        </div>
+      </nav>
+
+      <div class="foot">DUBAI, UAE</div>
+    </aside>
+
+    <main class="main">
+      <header class="print-header card">
+        <div>
+          <p>CURRICULUM VITAE</p>
+          <h1>Abdul Awal</h1>
+          <span>Al Quoz 4, Dubai, UAE &nbsp;•&nbsp; +971 52 818 2654 &nbsp;•&nbsp; aawal86@gmail.com &nbsp;•&nbsp; linkedin.com/in/aawal86</span>
+        </div>
+        <img src="https://lh3.googleusercontent.com/d/113uTKvRGwZafVXQmpJnZQmYikAZ1OkQZ" alt="Abdul Awal">
+      </header>
+
+      <!-- Executive Metric Impact Bar -->
+      <div class="metrics-bar">
+        <div class="metric-card">
+          <b>14+ Years</b>
+          <span>Dubai Corporate Experience</span>
+        </div>
+        <div class="metric-card">
+          <b>100+ Daily</b>
+          <span>Visitor & Front-Desk Volume</span>
+        </div>
+        <div class="metric-card">
+          <b>SIRA & G4S</b>
+          <span>Certified Professional</span>
+        </div>
+      </div>
+
+      <section id="cover-letter" class="card">
+        <div class="kicker"><span>INTRODUCTION</span></div>
+        <h2 class="section-title"><span class="symbol">✉</span>Cover Letter</h2>
+        <div class="letter">
+          <p><strong>To,</strong><br>The Hiring Manager,<br>Human Resources Department.</p>
+          <p><strong>Subject: Application for Administrative Support / Office Operations Coordinator Position.</strong></p>
+          <p>Dear Hiring Manager,</p>
+          <p>I am writing to express my strong interest in an Administrative Support or Office Coordination role within your esteemed organization. Backed by over 14+ years of continuous experience with <strong>G4S Secure Solution LLC in Dubai</strong> across major corporate, banking, and industrial client sites, I have developed extensive expertise in document management, ERP tracking (Oracle Logistics), petty cash handling, and cross-departmental coordination.</p>
+          <p>Throughout my career—serving in leadership assignments for premier clients like Seville Products (IFFCO Group), Etisalat, and First Abu Dhabi Bank—I have routinely executed core administrative workflows alongside facility oversight. These include assisting HR managers with NOC issuances, verifying vendor invoices, maintaining shift registers, managing logistics software entries, and providing professional reception service to visitors and staff.</p>
+          <p>I am recognized for my reliability, attention to detail under pressure, and absolute commitment to SOP compliance. I am eager to bring my multi-faceted background, computer proficiency, and dedication to your administrative team.</p>
+          <p>Thank you for your time and consideration. I welcome the opportunity to discuss my qualifications in an interview.</p>
+          <p>Sincerely,<br><strong>Abdul Awal</strong></p>
+        </div>
+      </section>
+
+      <section id="objective" class="card">
+        <div class="kicker"><span>CAREER DIRECTION</span></div>
+        <h2 class="section-title"><span class="symbol">◎</span>Career Summary</h2>
+        <div class="objective">
+          <span class="quote">“</span>
+          <p>Accomplished operations professional with over 14+ years of high-volume corporate and facility coordination experience in Dubai, seeking a dynamic Administrative Support or Office Operations role. Proven capability in Oracle ERP tracking, vendor invoice verification, document control, and multi-channel communication designed to maximize office productivity and operational compliance.</p>
+        </div>
+      </section>
+
+      <section id="experience" class="card">
+        <div class="kicker"><span>CAREER HISTORY</span></div>
+        <h2 class="section-title"><span class="symbol">▣</span>Professional Experience</h2>
+        <div class="role-head">
+          <div>
+            <div class="company">
+              <img src="https://lh3.googleusercontent.com/d/1dADuBP5WZAOVOaP71x6Iw_C_O68Z09Tq" alt="G4S Logo">
+              G4S Secure Solution LLC, Dubai <small>— An Allied Universal Company</small>
+            </div>
+            <div class="role">Physical Security Specialist & Administrative Team Leader</div>
+          </div>
+          <span class="date">02 May 2012 — Present</span>
+        </div>
+        <div class="achievements">
+          <div>✦ Certificate of Appreciation from IFFCO <span style="color:var(--muted);font-weight:400">(23 Feb 2025)</span></div>
+          <div>✦ Letter of Appreciation by G4S Secure Solution, Dubai Branch<span style="color:var(--muted);font-weight:400"> (30 Nov 2021 & 02 Mar 2022)</span></div>
+        </div>
+        <div class="subhead">Major Client Assignments</div>
+        <div class="assignments">
+          <span>
+            <img src="https://lh3.googleusercontent.com/d/1N3HEkGtLS0mepSBA1fGm5FvLWbLB0lY1" alt="IFFCO Logo">
+            Seville Products LLC <small>(IFFCO Group): Security Team Leader (Manufacturing & Beauty Division) | June 2019 - Present</small>
+          </span>
+          <span>
+            <img src="https://lh3.googleusercontent.com/d/1DZbjIc1PhkQAsNcGcjp6KbQyyRbjWxLw" alt="FAB Logo">
+            First Abu Dhabi Bank (FAB)<small>Corporate Security Specialist (Deira Branch) | July 2017 - May 2019</small>
+          </span>
+          <span>
+            <img src="https://lh3.googleusercontent.com/d/1PEhmfTVx93TXDY2Q9LpJZrWEjio4MV4W" alt="Etisalat Logo">
+            Etisalat<small>Security & Asset Protection Specialist (Al Baraha Business Center) | September 2015 - July 2017</small>
+          </span>
+          <span>
+            <img src="https://lh3.googleusercontent.com/d/1otmqyHimfQlnJQjR0661mcKC13PDLVgN" alt="FGB Logo">
+            First Gulf Bank (FGB)<small>Retail Sales Office Security Team Lead | July 2012 - August 2015</small>
+          </span>
+        </div>
+        <div class="subhead">Key Responsibilities & Administrative Impact</div>
+        <ul class="list two-col">
+          <li><strong>Site Security & Team Leadership:</strong> Supervised and led multi-site security shift operations, managed manpower rostering, handled site access control, and maintained strict incident reporting protocol under SIRA guidelines.</li>
+          <li><strong>Corporate Front-Desk Operations:</strong> Streamlined high-volume reception desk workflows, professionally directing 100+ daily visitors, managing phone networks, and supervising incoming/outgoing courier logistics. </li>
+          <li><strong>ERP & Material Control:</strong> Spearheaded material inflow/outflow via Oracle Logistics Software, issued digital gate passes, and maintained zero-discrepancy inventory tracking.</li>
+          <li><strong>Compliance, Safety & CCTV Surveillance:</strong> Monitored multi-channel CCTV networks, enforced strict corporate HSE (Health, Safety & Environment) policies, and ensured rapid emergency response compliance.  </li>
+          <li><strong>Administrative & HR Operations Support:</strong> Provided high-level administrative support to Site HR Managers, including NOC drafting, petty cash management, invoice verification, and Emirates ID/Visa renewal tracking. </li>
+          <li><strong>Audit Readiness & Documentation:</strong> Managed digital ledgers (MS Excel) and physical documentation systems, achieving 100% compliance during corporate internal & external security audits. </li>
+        </ul>
+      </section>
+
+      <section id="skills" class="card">
+        <div class="kicker"><span>CAPABILITIES</span></div>
+        <h2 class="section-title"><span class="symbol">✦</span>Training & Skills</h2>
+        <div class="training">
+          <b>Professional Qualifications & Certifications</b>
+          <p>• Security Basic Training by G4S & SIRA</p>
+          <p>• BLS, Basic Fire Fighting & POD Training by SIRA</p>
+          <p>• Fundamental Digital Marketing Certification by Google Workplace</p>
+          <p>• Basic Computer & Hardware Course by BCL, Dhaka</p>
+        </div>
+        <div class="detail-grid">
+          <div>
+            <h3>Technical & Computer Literacy</h3>
+            <div class="rows">
+              <div><span>Operating Systems</span><b>Windows 10 / 11</b></div>
+              <div><span>Office Software</span><b>MS Office (Excel, Word, Outlook)</b></div>
+              <div><span>Logistics / ERP</span><b>Oracle Logistics</b></div>
+              <div><span>Communication Tools</span><b>MS Teams, Zoom, Gmail</b></div>
+              <div><span>Hardware / Systems</span><b>Basic PC Hardware & CCTV Controls</b></div>
+            </div>
+          </div>
+          <div>
+            <h3>Core Competencies</h3>
+            <div class="pills">
+              <span>SIRA Certified</span>
+              <span>Administrative Support</span>
+              <span>Document Control</span>
+              <span>Customer Service</span>
+              <span>Data Entry (Excel)</span>
+              <span>Invoice Verification</span>
+              <span>Petty Cash Handling</span>
+              <span>Shift Supervision</span>
+              <span>Cross-Functional Teamwork</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="card">
+        <div class="kicker"><span>FOUNDATION</span></div>
+        <h2 class="section-title"><span class="symbol">▤</span>Education & Languages</h2>
+        <div class="detail-grid">
+          <div>
+            <h3>Educational Qualification</h3>
+            <div class="education"><b>HSC (12th Grade)</b><span>GPA 2.80 · 2004</span></div>
+            <div class="education"><b>SSC (10th Grade)</b><span>GPA 3.13 · 2001</span></div>
+            <p style="color:var(--muted);font-size:10px;margin-top:6px">Comilla Board, Bangladesh</p>
+          </div>
+          <div>
+            <h3>Language Proficiency</h3>
+            <div class="languages">
+              <span>English <small>· Professional Working</small></span>
+              <span>Arabic <small>· Basic Working</small></span>
+              <span>Hindi & Urdu <small>· Fluent Spoken</small></span>
+              <span>Bengali <small>· Native</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="personal" class="card">
+        <div class="kicker"><span>AT A GLANCE</span></div>
+        <h2 class="section-title"><span class="symbol">♙</span>Personal Information</h2>
+        <div class="personal">
+          <div><span>Nationality</span><b>Bangladeshi</b></div>
+          <div><span>Marital Status</span><b>Married</b></div>
+          <div><span>Visa Status</span><b>Employment Visa <small>(G4S Dubai · Expires Apr 2028)</small></b></div>
+          <div><span>Location</span><b>Al Quoz 4, Dubai, UAE</b></div>
+        </div>
+      </section>
+
+      <section id="documents" class="card">
+        <div class="kicker"><span>SUPPORTING MATERIAL</span></div>
+        <h2 class="section-title"><span class="symbol">▱</span>Verified Certificates & Credentials</h2>
+        <div class="documents">
+          <a href="https://drive.google.com/file/d/1xa6td4ZWxVLPyOuqw9dqsgKcJFWBVew2/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" title="View Digital Marketing Course">
+            <div class="doc-content">
+              Fundamental Digital Marketing Course
+              <small>View Document ↗</small>
+            </div>
+            <img class="doc-icon" src="https://lh3.googleusercontent.com/d/1GP_VHkwIBcUmJLcALwMFS3xUnOLTOMzo" alt="Digital Marketing Icon">
+          </a>
+          <a href="https://drive.google.com/file/d/1vXty1_JjQ8XUb9232TGftuj6DZzexIgi/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" title="View IFFCO Appreciation Letter">
+            <div class="doc-content">
+              Appreciation Letter - IFFCO
+              <small>View Document ↗</small>
+            </div>
+            <img class="doc-icon" src="https://lh3.googleusercontent.com/d/1N3HEkGtLS0mepSBA1fGm5FvLWbLB0lY1" alt="IFFCO Icon">
+          </a>
+          <a href="https://drive.google.com/file/d/1EdNzc7cWxaY9SOo-oO2NtNpTvPixYJwf/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" title="View G4S Appreciation Letter">
+            <div class="doc-content">
+              Appreciation Letter - G4S
+              <small>View Document ↗</small>
+            </div>
+            <img class="doc-icon" src="https://lh3.googleusercontent.com/d/1dADuBP5WZAOVOaP71x6Iw_C_O68Z09Tq" alt="G4S Icon">
+          </a>
+          <a href="https://drive.google.com/file/d/1m9RnAK_5XhrX5EJKKSsRDQakHZx0ZJjv/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" title="View Basic Computer Course">
+            <div class="doc-content">
+              Basic Computer Course Certificate
+              <small>View Document ↗</small>
+            </div>
+            <img class="doc-icon" src="https://lh3.googleusercontent.com/d/18P_5X4jyFlycWimn-WzTvEcWBH5yQYXQ" alt="Computer Course Icon">
+          </a>
+          <a href="https://drive.google.com/file/d/1F0U6cYYoctfsznQGTgUmhqfhwfkINiPa/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" title="View Hardware Course">
+            <div class="doc-content">
+              Basic Hardware Course
+              <small>View Document ↗</small>
+            </div>
+            <img class="doc-icon" src="https://lh3.googleusercontent.com/d/18P_5X4jyFlycWimn-WzTvEcWBH5yQYXQ" alt="Hardware Course Icon">
+          </a>
+          <a href="https://drive.google.com/file/d/1bZv-nlBt_vORGh9BJ2_xO12-yhktWVMV/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" title="View Network Course">
+            <div class="doc-content">
+              Basic Network Course
+              <small>View Document ↗</small>
+            </div>
+            <img class="doc-icon" src="https://lh3.googleusercontent.com/d/18P_5X4jyFlycWimn-WzTvEcWBH5yQYXQ" alt="Network Course Icon">
+          </a>
+        </div>
+      </section>
+
+      <section id="declaration" class="card">
+        <div class="kicker"><span>DECLARATION</span></div>
+        <h2 class="section-title"><span class="symbol">✍</span>Declaration</h2>
+        <div class="declaration">
+          <p>I hereby declare that all the statements and information provided in this curriculum vitae are true, complete, and correct to the best of my knowledge and belief.</p>
+          <div class="decl-meta">
+            <span>⌖ Dubai, UAE</span>
+            <span>▦ <span id="today"></span></span>
+            <strong style="margin-left:auto;color:var(--ink);font:italic 12px Georgia,serif">Abdul Awal</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="connect" class="connect">
+        <div>
+          <span class="connect-label">OPEN TO OPPORTUNITIES</span>
+          <h2>Let's connect.</h2>
+          <p>Available for professional positions in Administrative Support, Document Control, and Operations Management.</p>
+        </div>
+        <div class="connect-links">
+          <a href="mailto:aawal86@gmail.com">✉ Email Me</a>
+          <a href="tel:+971528182654">☎ Call Phone</a>
+          <a href="https://www.linkedin.com/in/aawal86" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">in LinkedIn Profile</a>
+        </div>
+      </section>
+
+      <footer class="page-foot">
+        <span><b>Abdul Awal</b> · Professional CV & Portfolio</span>
+        <span>© <span id="year"></span> Dubai, UAE</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const root = document.documentElement;
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      document.getElementById('themeToggle').textContent = isDark ? '☾ Dark Mode' : '☀ Light Mode';
+    }
+    document.getElementById('today').textContent = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
