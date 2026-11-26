@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Abdul Awal — Administrative Support and Office Operations professional with 14+ years of experience in Dubai corporate, banking and manufacturing environments.">
-<meta property="og:title" content="Abdul Awal | Administrative Operations">
-<meta property="og:description" content="Administrative support, HR documentation, invoice verification, document control and Oracle Logistics.">
+<meta name="description" content="Abdul Awal — CCTV Operator, Administrative Support, and Office Operations professional with 14+ years of experience in Dubai corporate, banking, and manufacturing environments.">
+<meta property="og:title" content="Abdul Awal | CCTV Operations & Administrative Support">
+<meta property="og:description" content="CCTV control room operations, administrative support, HR documentation, invoice verification, document control, and Oracle Logistics.">
 <meta name="theme-color" content="#10243a">
-<title>Abdul Awal — Administrative Support &amp; Office Operations</title>
+<title>Abdul Awal — CCTV Operations &amp; Administrative Support</title>
 <style>
 :root{
  --bg:#edf2f7;--surface:#fff;--surface-2:#f6f9fc;--ink:#142c46;--body:#35475c;--muted:#6b7b8e;
@@ -59,8 +59,8 @@ h1{color:#fff;font-size:clamp(34px,4.6vw,52px);letter-spacing:-1.7px;line-height
 .nav-inner{display:flex;gap:5px;overflow-x:auto;scrollbar-width:thin}
 .nav a{flex:none;padding:13px 12px 11px;text-decoration:none;color:var(--muted);font-size:12px;font-weight:750;border-bottom:2px solid transparent}
 .nav a:hover,.nav a:focus-visible{color:var(--ink);border-color:var(--accent)}
-.content{display:grid;grid-template-columns:minmax(250px,.78fr) minmax(0,1.55fr);gap:20px;padding:22px 0 34px;align-items:start}
-.left-col,.right-col{display:grid;gap:18px;min-width:0}
+.content{display:block;padding:22px 0 34px}
+.primary-col{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);min-width:0;scroll-margin-top:82px}
 .card-head{display:flex;align-items:center;gap:11px;margin-bottom:17px}
 .card-icon{width:37px;height:37px;display:grid;place-items:center;flex:none;border-radius:12px;background:var(--accent-soft);color:var(--accent);font-size:16px;font-weight:800}
@@ -81,6 +81,8 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
 .bullets li{padding-left:2px;margin:0 0 7px}
 .bullets li:last-child{margin-bottom:0}
 .bullets li::marker{color:var(--accent)}
+.role-block{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.role-block:last-of-type{padding-bottom:0;margin-bottom:0;border-bottom:0}
 .job-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .date{white-space:nowrap;color:var(--muted);font-size:11px;font-weight:700}
 .org{font-size:12px;color:var(--muted);margin:4px 0 13px}
@@ -96,11 +98,17 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
 .recognition{display:grid;gap:8px;padding:13px 14px;background:var(--accent-soft);border-radius:11px;font-size:11px}
 .recognition p{display:grid;grid-template-columns:18px minmax(0,1fr);gap:7px}
 .recognition p:before{content:"✦";color:var(--accent);font-weight:900}
+.support-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px;align-items:start}
+#certificates{margin-top:18px}
 .cert-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.cert-link{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-size:11px;font-weight:650;min-width:0;transition:border-color .18s,background .18s}
+.cert-link{display:flex;align-items:center;justify-content:flex-start;gap:10px;padding:12px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-size:11px;font-weight:650;min-width:0;transition:border-color .18s,background .18s}
 .cert-link:hover{border-color:var(--accent);background:var(--accent-soft)}
-.cert-link span:first-child{overflow-wrap:anywhere}
-.cert-link span:last-child{color:var(--accent);white-space:nowrap;font-size:10px}
+.cert-link .brand-logo{width:31px;height:31px;padding:4px;border-radius:7px}
+.cert-link .cert-name{flex:1;min-width:0;overflow-wrap:anywhere}
+.cert-link .cert-view{color:var(--accent);white-space:nowrap;font-size:10px}
+.client-item{display:flex;align-items:flex-start;gap:9px;min-width:0}
+.brand-logo{width:34px;height:34px;object-fit:contain;flex:none;padding:4px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.client-copy{min-width:0}
 .languages{display:grid;gap:9px}
 .language{display:grid;grid-template-columns:1fr auto;gap:8px;font-size:11px}
 .language span:first-child{font-weight:700;color:var(--ink)}
@@ -113,9 +121,8 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
  .hero-grid{grid-template-columns:112px minmax(0,1fr);gap:20px}
  .avatar{width:108px}
  .contact{grid-column:1/-1;border-left:0;border-top:1px solid #ffffff32;padding:14px 0 0;grid-template-columns:repeat(2,minmax(0,1fr))}
- .content{grid-template-columns:1fr}
- .left-col{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
- .left-col .card:first-child{grid-column:1/-1}
+ .support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .support-grid #skills{grid-column:1/-1}
 }
 @media(max-width:560px){
  .wrap{width:calc(100% - 22px)}
@@ -138,10 +145,11 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
  .stat span:last-child{font-size:10px;margin-top:2px}
  .nav{margin-top:14px}
  .nav a{font-size:11px;padding:11px 9px 9px}
- .content{padding:14px 0 24px;gap:13px}
- .left-col,.right-col{gap:13px}
- .left-col{grid-template-columns:1fr}
- .left-col .card:first-child{grid-column:auto}
+ .content{padding:14px 0 24px}
+ .primary-col{gap:13px}
+ .support-grid{grid-template-columns:1fr;gap:13px;margin-top:13px}
+ .support-grid #skills{grid-column:auto}
+ #certificates{margin-top:13px}
  .card{padding:16px;border-radius:14px}
  .card-head{margin-bottom:13px;gap:9px}
  .card-icon{width:32px;height:32px;border-radius:10px}
@@ -152,6 +160,8 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
  .timeline li{grid-template-columns:1fr;gap:3px;padding-bottom:13px}
  .timeline .date{font-size:10px}
  .cert-grid{grid-template-columns:1fr}
+ .brand-logo{width:30px;height:30px}
+ .cert-link .brand-logo{width:29px;height:29px}
  .footer-inner{display:block}
  .footer-mark{margin-top:10px}
 }
@@ -177,8 +187,10 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
  .stat-icon{width:25px;height:25px;border-radius:7px;font-size:11px}
  .stat strong{font-size:15pt}
  .stat span:last-child{font-size:7pt}
- .content{grid-template-columns:31% 1fr;gap:9px;padding:9px 0}
- .left-col,.right-col{gap:8px}
+ .content{padding:9px 0}
+ .primary-col{gap:8px}
+ .support-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:8px}
+ #certificates{margin-top:8px}
  .card{padding:9px;border-radius:7px;box-shadow:none;break-inside:avoid}
  .card-head{gap:6px;margin-bottom:7px}
  .card-icon{width:22px;height:22px;border-radius:5px;font-size:10px}
@@ -192,6 +204,7 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
  dl div{font-size:7pt;padding:4px 0;gap:4px}
  .bullets{font-size:7.5pt;line-height:1.32;padding-left:13px}
  .bullets li{margin-bottom:2px}
+ .role-block{padding-bottom:8px;margin-bottom:8px}
  .org{font-size:7.5pt;margin:2px 0 5px}
  .date{font-size:7pt}
  .timeline{padding-left:15px}
@@ -200,55 +213,14 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
  .timeline .date,.timeline small{font-size:6.5pt}
  .timeline b{font-size:7.3pt}
  .recognition{font-size:7pt;padding:6px;gap:4px}
- .certs-card{display:none}
+ #certificates{display:none}
  .language{font-size:7pt}
+ .brand-logo{width:25px;height:25px;padding:2px;border-radius:4px}
  .footer{background:#fff;color:#596a7e;border-top:1px solid #d7e0e8;padding:6px 0}
  .footer strong{color:#142c46}
  .footer-inner{font-size:7pt}
  a{text-decoration:none}
 }
-
-/* Updated reading order: summary → experience → skills/education/personal → certificates */
-.content{display:block;padding:22px 0 34px}
-.primary-col{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
-.support-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px;align-items:start}
-#certificates{margin-top:18px}
-@media(max-width:900px){
- .support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .support-grid #skills{grid-column:1/-1}
-}
-@media(max-width:560px){
- .content{padding:14px 0 24px}
- .primary-col{gap:13px}
- .support-grid{grid-template-columns:1fr;gap:13px;margin-top:13px}
- .support-grid #skills{grid-column:auto}
- #certificates{margin-top:13px}
-}
-@media print{
- .content{padding:9px 0}
- .primary-col{gap:8px}
- .support-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:8px}
- #certificates{margin-top:8px}
-}
-
-
-/* Client and certificate brand marks */
-.client-item{display:flex;align-items:flex-start;gap:9px;min-width:0}
-.brand-logo{width:34px;height:34px;object-fit:contain;flex:none;padding:4px;border:1px solid var(--line);border-radius:8px;background:#fff}
-.client-copy{min-width:0}
-.cert-link{justify-content:flex-start}
-.cert-link .brand-logo{width:31px;height:31px;padding:4px;border-radius:7px}
-.cert-link .cert-name{flex:1;min-width:0}
-.cert-link .cert-view{color:var(--accent);white-space:nowrap;font-size:10px}
-@media(max-width:560px){
- .brand-logo{width:30px;height:30px}
- .cert-link .brand-logo{width:29px;height:29px}
-}
-@media print{
- .brand-logo{width:25px;height:25px;padding:2px;border-radius:4px}
- .cert-link .brand-logo{width:23px;height:23px}
-}
-
 </style>
 </head>
 <body>
@@ -263,7 +235,7 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
    <div>
     <p class="eyebrow">Professional profile</p>
     <h1>Abdul Awal</h1>
-    <p class="role">Administrative Support &amp;<br>Office Operations</p>
+    <p class="role">CCTV Operator &amp; Administrative Operations</p>
     <p class="location">⌖ &nbsp;Al Quoz, Dubai, UAE</p>
    </div>
    <nav class="contact" aria-label="Contact details">
@@ -279,7 +251,7 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
 <div class="wrap">
  <div class="stats" aria-label="Career highlights">
   <div class="stat"><span class="stat-icon">▣</span><div><strong>14+</strong><span>Years in Dubai corporate roles</span></div></div>
-  <div class="stat"><span class="stat-icon">♟</span><div><strong>4</strong><span>Major client assignments</span></div></div>
+  <div class="stat"><span class="stat-icon">♟</span><div><strong>5</strong><span>G4S client &amp; technical assignments</span></div></div>
   <div class="stat"><span class="stat-icon">♙</span><div><strong>100+</strong><span>Visitors handled daily</span></div></div>
  </div>
 </div>
@@ -292,23 +264,36 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
  <div class="primary-col">
   <section class="card" id="summary">
    <div class="card-head"><span class="card-icon">✦</span><div><h2>Professional Summary</h2><div class="head-rule"></div></div></div>
-   <p class="summary">Administrative and operations professional with over 14 years of experience supporting corporate, banking and manufacturing clients in Dubai. Skilled in HR documentation support, invoice verification, petty cash, document control and Oracle Logistics tracking, with a reliable, SOP-driven approach built in security operations. Seeking an Administrative Support or Office Operations Coordinator role.</p>
+   <p class="summary">CCTV Operator, administrative, and operations professional with over 14 years of experience with G4S in Dubai across corporate, banking, manufacturing, and control room environments. Skilled in real-time CCTV surveillance, incident logging, access control verification, HR documentation support, invoice verification, document control, and Oracle Logistics tracking under strict SIRA and SOP standards.</p>
   </section>
   <section class="card" id="experience">
    <div class="card-head"><span class="card-icon">▣</span><div><h2>Professional Experience</h2><div class="head-rule"></div></div></div>
-   <div class="job-header"><h3>Physical Security Specialist &amp; Administrative Team Leader</h3><span class="date">May 2012 – Present</span></div>
-   <p class="org">G4S Secure Solution LLC, Dubai (an Allied Universal company)</p>
-   <ul class="bullets">
-    <li>Supported Site HR Managers with NOC drafting and Emirates ID and visa renewal tracking.</li>
-    <li>Handled petty cash and verified vendor invoices, keeping records accurate and ready for review.</li>
-    <li>Tracked material inflow and outflow in Oracle Logistics and issued digital gate passes.</li>
-    <li>Maintained shift registers, MS Excel ledgers and physical files used in internal and external security audits.</li>
-    <li>Ran front-desk operations: directed 100+ visitors daily, managed calls and handled courier logistics.</li>
-    <li>Led multi-site security shifts, including rostering, access control, CCTV monitoring and incident reports under SIRA and HSE standards.</li>
-   </ul>
-   <h4 class="subheading">Client assignments</h4>
+   <div class="role-block">
+    <div class="job-header"><h3>CCTV Operator</h3><span class="date">Dec 2026 – Present</span></div>
+    <p class="org">G4S Secure Solution LLC, Dubai (an Allied Universal company)</p>
+    <ul class="bullets">
+     <li>Monitor live multi-zone camera feeds in real time across critical entry/exit points, perimeters, and restricted facilities.</li>
+     <li>Detect, verify, and escalate security alerts, unauthorized access, and safety incidents to on-site response teams.</li>
+     <li>Maintain daily control room logs, shift handover notes, and incident reports in compliance with SIRA standards.</li>
+     <li>Manage video archiving, footage retrieval, and chain-of-custody records while conducting routine camera and VMS health checks.</li>
+    </ul>
+   </div>
+   <div class="role-block">
+    <div class="job-header"><h3>Physical Security Specialist &amp; Administrative Team Leader</h3><span class="date">May 2012 – Nov 2026</span></div>
+    <p class="org">G4S Secure Solution LLC, Dubai (an Allied Universal company)</p>
+    <ul class="bullets">
+     <li>Supported Site HR Managers with NOC drafting and Emirates ID and visa renewal tracking.</li>
+     <li>Handled petty cash and verified vendor invoices, keeping records accurate and ready for review.</li>
+     <li>Tracked material inflow and outflow in Oracle Logistics and issued digital gate passes.</li>
+     <li>Maintained shift registers, MS Excel ledgers, and physical files used in internal and external security audits.</li>
+     <li>Ran front-desk operations: directed 100+ visitors daily, managed calls, and handled courier logistics.</li>
+     <li>Led multi-site security shifts, including rostering, access control, CCTV monitoring, and incident reports under SIRA and HSE standards.</li>
+    </ul>
+   </div>
+   <h4 class="subheading">Client &amp; operational assignments</h4>
    <ul class="timeline">
-    <li><span class="date">Jun 2019 – Present</span><div class="client-item"><img class="brand-logo" src="https://www.google.com/s2/favicons?domain=iffco.com&amp;sz=128" alt="IFFCO logo" loading="lazy" onerror="this.style.display='none'"><div class="client-copy"><b>Seville Products LLC (IFFCO Group)</b><small>Security Team Leader, Manufacturing &amp; Beauty Division</small></div></div></li>
+    <li><span class="date">Dec 2026 – Present</span><div class="client-item"><img class="brand-logo" src="https://www.google.com/s2/favicons?domain=g4s.com&amp;sz=128" alt="G4S logo" loading="lazy" onerror="this.style.display='none'"><div class="client-copy"><b>G4S Secure Solution LLC</b><small>CCTV Operator, Electronic Security &amp; Control Room Operations</small></div></div></li>
+    <li><span class="date">Jun 2019 – Nov 2026</span><div class="client-item"><img class="brand-logo" src="https://www.google.com/s2/favicons?domain=iffco.com&amp;sz=128" alt="IFFCO logo" loading="lazy" onerror="this.style.display='none'"><div class="client-copy"><b>Seville Products LLC (IFFCO Group)</b><small>Security Team Leader, Manufacturing &amp; Beauty Division</small></div></div></li>
     <li><span class="date">Jul 2017 – May 2019</span><div class="client-item"><img class="brand-logo" src="https://lh3.googleusercontent.com/d/1DZbjIc1PhkQAsNcGcjp6KbQyyRbjWxLw" alt="First Abu Dhabi Bank logo" loading="lazy" onerror="this.style.display='none'"><div class="client-copy"><b>First Abu Dhabi Bank</b><small>Corporate Security Specialist, Deira Branch</small></div></div></li>
     <li><span class="date">Sep 2015 – Jul 2017</span><div class="client-item"><img class="brand-logo" src="https://www.google.com/s2/favicons?domain=eand.com&amp;sz=128" alt="Etisalat logo" loading="lazy" onerror="this.style.display='none'"><div class="client-copy"><b>Etisalat</b><small>Security &amp; Asset Protection Specialist, Al Baraha Business Center</small></div></div></li>
     <li><span class="date">Jul 2012 – Aug 2015</span><div class="client-item"><img class="brand-logo" src="https://lh3.googleusercontent.com/d/1otmqyHimfQlnJQjR0661mcKC13PDLVgN" alt="First Gulf Bank logo" loading="lazy" onerror="this.style.display='none'"><div class="client-copy"><b>First Gulf Bank</b><small>Retail Sales Office Security Team Lead</small></div></div></li>
@@ -325,14 +310,15 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
    <div class="card-head"><span class="card-icon">✳</span><div><h2>Skills &amp; Training</h2><div class="head-rule"></div></div></div>
    <h4>Core strengths</h4>
    <ul class="skill-tags">
-    <li>Administrative support</li><li>Document control</li><li>Invoice verification</li><li>Petty cash</li><li>Data entry (Excel)</li><li>HR documentation</li><li>Reception &amp; customer service</li><li>Shift supervision</li><li>SIRA certified</li>
+    <li>CCTV surveillance</li><li>Control room logs</li><li>Access control</li><li>Administrative support</li><li>Document control</li><li>Invoice verification</li><li>Petty cash</li><li>Data entry (Excel)</li><li>HR documentation</li><li>Shift supervision</li><li>SIRA certified</li>
    </ul>
    <h4>Tools &amp; systems</h4>
    <dl>
+    <div><dt>Surveillance</dt><dd>CCTV / VMS, DVR / NVR, Access Control</dd></div>
     <div><dt>Logistics / ERP</dt><dd>Oracle Logistics</dd></div>
     <div><dt>Office</dt><dd>MS Excel, Word, Outlook</dd></div>
     <div><dt>Communication</dt><dd>MS Teams, Zoom, Gmail</dd></div>
-    <div><dt>Systems</dt><dd>Windows 10/11, CCTV controls, basic PC hardware</dd></div>
+    <div><dt>Systems</dt><dd>Windows 10/11, basic PC hardware</dd></div>
    </dl>
    <h4>Training</h4>
    <ul class="bullets">
@@ -380,7 +366,7 @@ dd{text-align:right;margin:0;color:var(--ink);font-weight:650;overflow-wrap:anyw
 
 <footer class="footer"><div class="wrap footer-inner">
  <p class="footer-mark">I declare that the information in this CV is true and correct to the best of my knowledge.</p>
- <p><strong>Abdul Awal</strong>Updated October 2026</p>
+ <p><strong>Abdul Awal</strong>Updated November 2026</p>
 </div></footer>
 <script>
 (() => {
